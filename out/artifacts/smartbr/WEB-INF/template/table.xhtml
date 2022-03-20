@@ -1,0 +1,68 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <div class="ui-tabs" >
+        <div class="wrapper-table">
+            <p:dataTable var="product" value="#{dtBasicView.products}" reflow="true" rows="5" paginator="true"
+                         rowsPerPageTemplate="5,10,{ShowAll|'All'}" paginatorPosition="bottom"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks}
+                                            {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         currentPageReportTemplate="{startRecord}-{endRecord} de {totalRecords} itens" widgetVar="tabela">
+
+                <f:facet name="header">
+                    <div class="left">Solicitações de compras pendentes</div>
+                    <div class="rigth">
+                        <div class="search-box-table">
+                            <i class="pi pi-search search-icon"/>
+                            <input type="text" alt="Pesquisar" class="search-text-table" onkeyup="PF('dtProducts').filter()"
+                                   placeholder="Pesquisar nos combos"/>
+                        </div>
+                        <div class="replay">
+                            <i class="pi pi-replay"></i>
+                        </div>
+
+                    </div>
+                </f:facet>
+                <p:column headerText="Codigo">
+                    <h:outputText value="#{product.code}"/>
+                </p:column>
+
+                <p:column headerText="Fornecidor">
+                    <h:outputText value="#{product.code}"/>
+                </p:column>
+
+                <p:column headerText="Tomador">
+                    <h:outputText value="#{product.name}"/>
+                </p:column>
+
+                <p:column headerText="Produtos">
+                    <h:outputText value="#{product.category}"/>
+                </p:column>
+
+                <p:column headerText="Reposição">
+                    <h:outputText value="$#{product.price}"/>
+                </p:column>
+
+                <p:column headerText="Vendidos">
+                    <h:outputText value="$#{product.price}"/>
+                </p:column>
+
+                <p:column headerText="Data de aviso">
+                    <h:outputText value="$#{product.price}"/>
+                </p:column>
+
+                <p:column headerText="Processamento">
+                    <h:outputText value="$#{product.price}"/>
+                </p:column>
+
+                <p:column headerText="Lorem Ipsum">
+                    <h:outputText value="$#{product.price}"/>
+                </p:column>
+            </p:dataTable>
+        </div>
+
+    </div>
+</ui:composition>

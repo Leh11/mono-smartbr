@@ -1,0 +1,192 @@
+:root {
+    --background-tab-content: #ECECEC;
+    --primary-color: #0059B3;
+    --card-color: #FFFFFF;
+    --border-button: #0059B3;
+    --button-color: #003366;
+    --divider-color: #99a9be8f;
+    --back-body-color: #F5F5F5;
+    --font-color: #0059B3;
+    --background-tab-area: #F5F5F5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+.pi{
+    cursor: pointer;
+}
+/*FIRST TAB CONTENT*/
+body .ui-tabs .ui-tabs-nav li.ui-tabs-header,
+body .ui-tabs.ui-tabs-top>.ui-tabs-nav,
+body .ui-tabs.ui-tabs-top>.ui-tabs-nav
+li.ui-tabs-header.ui-state-active {
+    background-color: #ECECEC;
+    color: #6c757d;
+}
+body .ui-tabs.ui-tabs-top>.ui-tabs-nav
+li.ui-tabs-header.ui-state-active:hover{
+    background-color: #ECECEC;
+}
+body .ui-tabs .ui-tabs-nav li.ui-tabs-header.ui-state-active a {
+    color: var(--primary-color);
+}
+body .ui-tabs .ui-tabs-nav li.ui-tabs-header a{
+    font-weight: normal;
+}
+body .ui-tabs .ui-tabs-nav li.ui-tabs-header.ui-tabs-outline{
+    outline: none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0;
+}
+body .ui-tabs .ui-tabs-panels .ui-tabs-panel:first-of-type {
+    padding: 1rem;
+    background: var(--background-tab-area);
+}
+#header-side span:first-of-type{
+    color: var(--primary-color);
+    padding-left: .5rem;
+}
+#search-1 {
+    width: 1rem;
+}
+
+
+.first-container-tab{
+    background-color: #ECECEC;
+    border-radius: 10px;
+}
+.second-container-tab {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.tab-header{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1rem;
+    align-items: center;
+    padding: 1rem 3rem;
+    flex-wrap: wrap;
+}
+.tab-header > span{
+    color: var(--font-color);
+}
+.first-group-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper-toogle{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.second-group-options{
+   display: flex;
+}
+.wrapper-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: start;
+}
+.ui-toggleswitch{
+    margin-right: .5rem;
+}
+body .ui-toggleswitch.ui-toggleswitch-checked .ui-toggleswitch-slider {
+    background: var(--primary-color);
+}
+body .ui-toggleswitch.ui-toggleswitch-focus .ui-toggleswitch-slider {
+    outline: none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    border-radius: 10px;
+    padding: .5rem;
+    cursor: pointer;
+    transition: .5s linear;
+}
+.search-text {
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    padding: .4rem;
+    line-height: inherit;
+    transition: .5s ease;
+    width: 0;
+    background: none;
+}
+.search-box:hover > .search-text {
+    width: 90%;
+}
+.search-box:hover {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-button);
+    margin-right: 1rem;
+}
+
+/*CAROUSEL CONTENT*/
+body .ui-carousel .ui-carousel-content .ui-carousel-prev,
+body .ui-carousel .ui-carousel-content .ui-carousel-next {
+    width: 1rem;
+    margin: .5rem;
+}
+body .ui-carousel .ui-carousel-item{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+
+/*SMART PHONE SCREEN*/
+@media screen and (max-width: 360px) {
+    body .ui-tabs .ui-tabs-panels .ui-tabs-panel:first-of-type {
+        padding: .6rem;
+    }
+
+    .tab-header{
+        display: flex;
+        line-height: 1rem;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    .options{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: .4rem;
+    }
+    .search-box:hover > .search-text {
+        width: 100%;
+        max-width: 8rem;
+    }
+    .wrapper-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        align-content: start;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .tab-header{
+        flex-direction: column;
+    }
+    .first-group-options{
+        padding: .5rem;
+    }
+}

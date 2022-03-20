@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Hello smart</title>
+
+    <h:outputStylesheet library="css" name="index.css"/>
+    <h:outputStylesheet library="css" name="sidenav.css"/>
+    <h:outputStylesheet library="css" name="table.css"/>
+    <h:outputStylesheet library="css" name="operacional.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</h:head>
+<h:body>
+
+    <div class="sidenav-container">
+
+        <div class="sidenav">
+            <div class="sidenav-header">
+                <p:sidebar styleClass="ui-sidebar" widgetVar="sidenav" position="right">
+                    <div id="header-side">
+                        <span>
+                            <i class="pi pi-filter icon" onclick="PF('sidenav').show()"></i>
+                            Filtros
+                        </span>
+
+                        <div class="search-box">
+                            <span class="material-icons search-icon"></span>
+                            <input type="text" alt="Pesquisar" class="search-text" placeholder="Pesquisar nos combos" />
+                        </div>
+                    </div>
+                    <div id="content-side">
+                        <ui:insert name="content-side">
+                            <ui:include src="content-side.xhtml" />
+                        </ui:insert>
+                    </div>
+                </p:sidebar>
+            </div>
+        </div>
+
+        <div class="side-content">
+
+            <p:tabView multiViewState="true" id="tabViewMVS" styleClass="tab-view">
+                <p:tab title="Operacional">
+                    <div class="first-container-tab">
+                        <div class="tab-header">
+                            <div class="first-group-options">
+                                <div><span class="las la-angle-down space">Operacional</span></div>
+                            </div>
+                            <div class="second-group-options">
+                                <div class="wrapper-toogle">
+                                    <p:toggleSwitch id="toogle" value="#{selectBooleanView.value1}" />
+                                    <span>Mostrar cards vazios</span>
+                                </div>
+                                <div class="wrapper-icons">
+                                    <div class="search-box">
+                                        <i class="pi pi-search search-icon"/>
+                                        <input type="text" alt="Pesquisar" class="search-text" placeholder="Pesquisar nos combos" />
+                                    </div>
+                                    <span class="pi pi-filter icon" onclick="PF('sidenav').show()"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="operacional">
+                            <ui:insert name="operacional">
+                                <ui:include src="operacional.xhtml" />
+                            </ui:insert>
+                        </div>
+                    </div>
+                </p:tab>
+
+                <p:tab title="Financeiro">
+                </p:tab>
+
+                <p:tab title="Marketplace">
+                </p:tab>
+
+                <p:tab title="Manutenção">
+                </p:tab>
+
+                <p:tab title="Revisão de Produtos">
+                </p:tab>
+            </p:tabView>
+
+
+            <p:tabView multiViewState="true"  styleClass="tab-view">
+                <p:tab title="Solicitações de compras pendendentes">
+                    <div class="second-container-tab">
+                         <div id="table-1">
+                            <ui:insert name="table">
+                                <ui:include src="table.xhtml" />
+                            </ui:insert>
+                        </div>
+                    </div>
+                </p:tab>
+
+                <p:tab title="Tab-2">
+                    <div class="second-container-tab">
+                        <div id="table-2">
+                            <ui:insert name="table">
+                                <ui:include src="table.xhtml" />
+                            </ui:insert>
+                        </div>
+                    </div>
+                </p:tab>
+            </p:tabView>
+        </div>
+    </div>
+</h:body>
+</html>
+

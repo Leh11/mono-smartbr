@@ -1,0 +1,113 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+   <div class="first-group">
+      <hr/>
+      <div class="item-list">
+         <input id="first-content" type="checkbox" />
+         <div class="wrapper-content">
+            <label for="first-content">
+               <span class="title-list">Grupo/Colaboradores</span>
+            </label>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+         </div>
+      </div>
+      <hr/>
+      <div class="item-list">
+         <input id="second-content" type="checkbox" />
+         <div class="wrapper-content">
+            <label for="second-content">
+               <span class="title-list">Filias</span>
+            </label>
+
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+         </div>
+      </div>
+      <hr/>
+      <div class="item-list">
+         <input id="third-content" type="checkbox" />
+         <div class="wrapper-content">
+            <label for="third-content">
+               <span class="title-list">Empresas</span>
+            </label>
+
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+            <div class="content">
+               <input type="checkbox" class="item-button" ></input>
+               <span class="item-icon"><i class="pi pi-compass"></i></span>
+               <span class="item-name">Empresa</span>
+            </div>
+         </div>
+      </div>
+      <hr/>
+   </div>
+
+
+   <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" responsive="true">
+      <p:commandButton value="CANCELAR" type="button" styleClass="effect-button" />
+      <p:commandButton value="EXCLUIR" type="button" styleClass="effect-button" />
+   </p:confirmDialog>
+
+   <div class="second-group">
+      <p:commandButton value="LIMPAR FILTROS" action="#{confirmView.confirm}" styleClass="">
+         <p:commandButton value="CANCELAR" type="button" styleClass="effect-button" />
+         <p:commandButton value="FILTRAR" type="button" styleClass="effect-button" />
+         <p:confirm header="Limpar filtro(s)" message="Deseja limpar o(s) filtro(s) do(s) combo(s) do fluxo?" />
+      </p:commandButton>
+   </div>
+
+</ui:composition>

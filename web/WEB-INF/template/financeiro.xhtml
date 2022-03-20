@@ -1,0 +1,54 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+    <div class="ui-tabs">
+        <p:carousel numVisible="3" numScroll="3" styleClass="carousel"
+                    responsiveOptions="#{carouselView.responsiveOptions}">
+
+            <div class="card">
+                <div class="card-title">
+                    <span>
+                        <i class="pi pi-check-square"></i>
+                        Em dia</span>
+                </div>
+                <div class="card-subtitle">
+                    <span>82</span>
+                    <span>Solicitações de compras pendentes</span>
+                </div>
+
+                <div class="card-content">
+                    <div class="inside-card">
+                        <span>255</span>
+                        <p>Produto</p>
+                    </div>
+                    <div class="inside-card">
+                        <span>255</span>
+                        <p>Vendidos</p>
+                    </div>
+                    <div class="inside-card">
+                        <span>255</span>
+                        <p>Reposição</p>
+                    </div>
+                    <div class="inside-card">
+                        <span>255</span>
+                        <p>Reposição</p>
+                    </div>
+                    <div class="inside-card">
+                        <span>255</span>
+                        <p>Produto</p>
+                    </div>
+                    <div class="inside-card">
+                        <span>255</span>
+                        <p>Vendidos</p>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button class="">CARREGAR DETALHES</button>
+                </div>
+            </div>
+        </p:carousel>
+    </div>
+</ui:composition>

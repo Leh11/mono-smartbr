@@ -1,0 +1,120 @@
+:root {
+    --background-tab-content: #ECECEC;
+    --primary-color: #0059B3;
+    --card-color: #FFFFFF;
+    --border-button: #0059B3;
+    --button-color: #003366;
+    --divider-color: #99a9be8f;
+    --back-body-color: #F5F5F5;
+    --font-color: #0059B3;
+    --background-tab-area: #F5F5F5;
+}
+.wrapper-table{
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem;
+    border: 1px solid var(--background-tab-area);
+}
+body .ui-datatable .ui-datatable-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid var(--background-tab-area);
+    border-radius: 5px 5px 0 0 ;
+    background: none;
+}
+.search-box-table{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    border: 1px solid var(--background-tab-area);
+}
+.search-text-table {
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    padding: .4rem;
+    line-height: inherit;
+    width: 100%;
+    background: none;
+}
+.rigth {
+    display: flex;
+    align-items: center;
+}
+.rigth .replay{
+    margin: 0 1rem;
+}
+body .ui-datatable
+.ui-paginator.ui-paginator-bottom{
+    display: flex;
+    justify-content: right;
+    line-height: 1rem;
+}
+.ui-datatable table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid var(--background-tab-area);
+}
+body .ui-datatable thead th {
+    background: #f8f9fa;
+    color: #495057;
+    padding: 1rem 1rem;
+    border-width: 1px;
+    text-align: left;
+    box-sizing: content-box;
+    transition: background-color 0.2s,
+                color 0.2s, border-color 0.2s,
+                box-shadow 0.2s;
+}
+body .ui-datatable .ui-datatable-data > tr:nth-child(even) {
+    background: var(--background-tab-area);
+    color: #495057;
+    transition: background-color 0.2s,
+    color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+}
+body .ui-paginator .ui-paginator-current,
+body .ui-paginator .ui-paginator-rpp-options {
+    margin: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+}
+body .ui-datatable
+.ui-paginator.ui-paginator-bottom,
+.ui-datatable tbody.ui-datatable-data{
+    border-width: 1px;
+    border-radius: 0 0 5px 5px;
+}
+
+
+@media screen and (max-width: 640px){
+    .ui-datatable-reflow
+    .ui-datatable-data
+    td[role="gridcell"]
+    .ui-column-title{
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 540px){
+    body .ui-datatable .ui-datatable-header{
+        flex-direction: column;
+    }
+    .left{
+        padding: .4rem;
+    }
+    .rigth{
+        justify-content: space-between;
+        width: 100%;
+    }
+}
