@@ -10,13 +10,6 @@
     --background-tab-area: #F5F5F5;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-}
 .pi{
     cursor: pointer;
 }
@@ -80,11 +73,13 @@ body .ui-tabs .ui-tabs-panels .ui-tabs-panel:first-of-type {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    color: var(--primary-color);
 }
 .wrapper-toogle{
     display: flex;
     align-items: center;
     justify-content: right;
+    margin-right: .5rem;
 }
 .second-group-options{
    display: flex;

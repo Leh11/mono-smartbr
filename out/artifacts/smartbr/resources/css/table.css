@@ -2,6 +2,9 @@
     --background-tab-content: #ECECEC;
     --primary-color: #0059B3;
     --card-color: #FFFFFF;
+    --font-family: Roboto;
+    --font-color-header: #3E3E3E;
+    --font-table-content-color: #3E3E3E;
     --border-button: #0059B3;
     --button-color: #003366;
     --divider-color: #99a9be8f;
@@ -41,7 +44,13 @@ body .ui-datatable .ui-datatable-header{
     padding: .4rem;
     line-height: inherit;
     width: 100%;
+    font-size: 14px;
+    font-family: var(--font-family);
     background: none;
+}
+.left{
+    color: var(--font-color);
+    font-size: 16px;
 }
 .rigth {
     display: flex;
@@ -64,14 +73,23 @@ body .ui-datatable
 }
 body .ui-datatable thead th {
     background: #f8f9fa;
-    color: #495057;
-    padding: 1rem 1rem;
+    font: var(--font-family) 16px normal var(--font-color-header);
+    padding: .1rem;
+    height: 50px;
     border-width: 1px;
     text-align: left;
     box-sizing: content-box;
     transition: background-color 0.2s,
                 color 0.2s, border-color 0.2s,
                 box-shadow 0.2s;
+}
+body .ui-datatable .ui-datatable-data > tr > td{
+    padding: .4rem;
+    height: 50px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    color: var(--font-table-content-color);
+    width: 100%;
 }
 body .ui-datatable .ui-datatable-data > tr:nth-child(even) {
     background: var(--background-tab-area);
