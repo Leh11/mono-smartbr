@@ -3,7 +3,9 @@
                 xmlns:p="http://primefaces.org/ui">
 
     <div class="ui-tabs">
-        <p:carousel numVisible="3" numScroll="3" circular="true">
+        <p:carousel value="#{carouselView.products}" var="product"
+                    numVisible="4" numScroll="4" circular="true"
+                    responsiveOptions="#{carouselView.responsiveOptions}">
             <div class="card">
                 <div class="card-title">
                     <span>

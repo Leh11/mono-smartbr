@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 :root {
     --background-tab-content: #ECECEC;
     --primary-color: #0059B3;
@@ -32,9 +33,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 14rem;
-    min-width: 13rem;
-    width: 100%;
+    width: 14rem;
     height: 25rem;
     margin: 1rem;
     box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
@@ -63,18 +62,26 @@
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
+.card-subtitle span:first-of-type,
+.card-subtitle span:last-of-type,
+.inside-card p,
+.card-title span:last-of-type{
+    font-style: normal;
+    font-weight: normal;
+    font-family: var(--font-family);
+}
 .card-subtitle span:first-of-type{
-    font-size: 30px;
-    font-family: var(--font-family);;
+    font-size: 40px;
 }
 .card-subtitle span:first-of-type,
 .inside-card span{
     color: var(--color-child-card-header);
 }
 .card-subtitle span:last-of-type,
-.inside-card p{
+.inside-card p,
+.card-title span:last-of-type{
     color: var(--color-card-content);
-    font-size: 14px;
+    font-size: 16px;
 }
 .card-content {
     display: grid;
